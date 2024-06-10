@@ -1,6 +1,6 @@
 import Header from "./components/Header.js";
-import CharacterRatings from "./components/CharacterRatings.js";
-import CharacterCards from "./components/CharacterCards.js";
+import CharacterRatings from "./components/CharacterRatings";
+import CharacterCards from "./components/CharacterCards";
 
 import { data } from "../types";
 import "./css/header.css";
