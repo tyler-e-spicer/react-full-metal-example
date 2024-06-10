@@ -3,7 +3,9 @@ import { Character, CharactersProps } from "../../types";
 
 const CharacterRatings: React.FC<CharactersProps> = ({ characters }) => {
   const charactersCopy = characters.slice();
-  const sortedCharacters = charactersCopy.sort((a, b) => (b.votes ?? 0) - (a.votes ?? 0));
+  const sortedCharacters = charactersCopy.sort(
+    (a, b) => (b.votes ?? 0) - (a.votes ?? 0)
+  );
   const topCharacters = sortedCharacters.slice(0, 5);
 
   return (
