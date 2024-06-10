@@ -1,9 +1,8 @@
 import CharacterCard from "./CharacterCard";
-import PropTypes from "prop-types";
-import { characterPropTypes } from "../utils/propTypes";
+import { CharactersProps } from "../../types";
 import "../css/characterCards.css";
 
-const CharacterCards = ({ characters }) => {
+const CharacterCards: React.FC<CharactersProps> = ({ characters }) => {
   // localeCompare returns 1, -1, or 0 depending on order of string
   const sortedChars = characters
     .slice()
@@ -22,10 +21,6 @@ const CharacterCards = ({ characters }) => {
       ))}
     </section>
   );
-};
-
-CharacterCards.propTypes = {
-  characters: PropTypes.arrayOf(characterPropTypes).isRequired,
 };
 
 export default CharacterCards;

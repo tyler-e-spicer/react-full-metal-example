@@ -1,4 +1,4 @@
-const Header = () => {
+const Header: React.FC = (): JSX.Element => {
   return (
     <header>
       <h1>Fullmetal Alchemist</h1>

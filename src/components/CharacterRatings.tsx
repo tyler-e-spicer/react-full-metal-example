@@ -1,10 +1,9 @@
 import "../css/characterRatings.css";
-import PropTypes from "prop-types";
-import { characterPropTypes } from "../utils/propTypes";
+import { Character, CharactersProps } from "../../types";
 
-const CharacterRatings = ({ characters }) => {
+const CharacterRatings: React.FC<CharactersProps> = ({ characters }) => {
   const charactersCopy = characters.slice();
-  const sortedCharacters = charactersCopy.sort((a, b) => b.votes - a.votes);
+  const sortedCharacters = charactersCopy.sort((a, b) => (b.votes ?? 0) - (a.votes ?? 0));
   const topCharacters = sortedCharacters.slice(0, 5);
 
   return (
@@ -27,18 +26,14 @@ const CharacterRatings = ({ characters }) => {
               <td>
                 {char.nickName ? `${char.name} "${char.nickName}"` : char.name}
               </td>
-              <td>{char.skillset.join(", ")}</td>
-              <td>{char.votes}</td>
+              <td>{char.skillset?.join(", ")}</td>
+              <td>{char.votes ?? 0}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </section>
   );
-};
-
-CharacterRatings.propTypes = {
-  characters: PropTypes.arrayOf(characterPropTypes).isRequired,
 };
 
 export default CharacterRatings;

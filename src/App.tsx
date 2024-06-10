@@ -1,7 +1,8 @@
-import Header from "./components/Header";
-import CharacterRatings from "./components/CharacterRatings";
-import CharacterCards from "./components/CharacterCards";
-import { data } from "../public/fma-data.ts";
+import Header from "./components/Header.js";
+import CharacterRatings from "./components/CharacterRatings.js";
+import CharacterCards from "./components/CharacterCards.js";
+
+import { data } from "../types";
 import "./css/header.css";
 
 const App = () => {
