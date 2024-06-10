@@ -8,9 +8,8 @@ export type Character = {
 };
 
 export interface CharactersProps {
-  characters: Character[]; 
+  characters: Character[];
 }
-
 
 export const data: Character[] = [
   {

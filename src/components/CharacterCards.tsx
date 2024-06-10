@@ -2,7 +2,7 @@ import CharacterCard from "./CharacterCard";
 import { CharactersProps } from "../../types";
 import "../css/characterCards.css";
 
-const CharacterCards: React.FC<CharactersProps> = ({ characters }) => {
+const CharacterCards = ({ characters }: CharactersProps) => {
   // localeCompare returns 1, -1, or 0 depending on order of string
   const sortedChars = characters
     .slice()
