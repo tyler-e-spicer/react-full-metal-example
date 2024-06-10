@@ -1,11 +1,12 @@
-import { Character } from "../../types";
+import { Character, CharactersProps } from "../../types";
 
-const CharacterCard: React.FC<Character> = ({
-  name,
-  nickName,
-  imageUrl,
-  background,
-}) => {
+interface CharacterCardProps {
+  character: Character;
+}
+
+const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
+  const { name, nickName, imageUrl, background } = character;
+
   return (
     <div className="card">
       <div className="card-titles">
